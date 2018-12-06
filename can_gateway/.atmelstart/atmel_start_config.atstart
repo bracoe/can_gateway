@@ -321,7 +321,7 @@ drivers:
     api: HAL:HPL:GCLK
     configuration:
       enable_gclk_gen_0: true
-      enable_gclk_gen_1: true
+      enable_gclk_gen_1: false
       enable_gclk_gen_2: false
       enable_gclk_gen_3: false
       enable_gclk_gen_4: false
@@ -333,7 +333,7 @@ drivers:
       gclk_arch_gen_0_oe: false
       gclk_arch_gen_0_oov: false
       gclk_arch_gen_0_runstdby: false
-      gclk_arch_gen_1_enable: true
+      gclk_arch_gen_1_enable: false
       gclk_arch_gen_1_idc: false
       gclk_arch_gen_1_oe: false
       gclk_arch_gen_1_oov: false
@@ -600,9 +600,9 @@ drivers:
       domain_group:
         nodes:
         - name: CAN
-          input: Generic clock generator 1
+          input: Generic clock generator 0
         configuration:
-          can_gclk_selection: Generic clock generator 1
+          can_gclk_selection: Generic clock generator 0
   CAN_1:
     user_label: CAN_1
     definition: Atmel:SAMC21_Drivers:0.0.1::SAMC21G18A-AN::CAN1::driver_config_definition::CAN::HAL:Driver:CAN.Async
@@ -662,9 +662,9 @@ drivers:
       domain_group:
         nodes:
         - name: CAN
-          input: Generic clock generator 1
+          input: Generic clock generator 0
         configuration:
-          can_gclk_selection: Generic clock generator 1
+          can_gclk_selection: Generic clock generator 0
 pads:
   PB10:
     name: PB10
