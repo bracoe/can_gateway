@@ -15,7 +15,7 @@
 // <i> Oscillation frequency of the resonator connected to the External Multipurpose Crystal Oscillator.
 // <id> xosc_frequency
 #ifndef CONF_XOSC_FREQUENCY
-#define CONF_XOSC_FREQUENCY 400000
+#define CONF_XOSC_FREQUENCY 20000000
 #endif
 
 // <h> External Multipurpose Crystal Oscillator Control
@@ -52,7 +52,7 @@
 // <i> Indicates whether Automatic Amplitude Gain Control is enabled or not
 // <id> xosc_arch_ampgc
 #ifndef CONF_XOSC_AMPGC
-#define CONF_XOSC_AMPGC 0
+#define CONF_XOSC_AMPGC 1
 #endif
 
 // <o> External Multipurpose Crystal Oscillator Gain
@@ -77,7 +77,7 @@
 // <i> Indicates whether Run in Standby is enabled or not
 // <id> xosc_arch_runstdby
 #ifndef CONF_XOSC_RUNSTDBY
-#define CONF_XOSC_RUNSTDBY 0
+#define CONF_XOSC_RUNSTDBY 1
 #endif
 
 // <q> Clock Switch Back
@@ -105,7 +105,7 @@
 // <i> Indicates whether the connections between the I/O pads and the external clock or crystal oscillator is enabled or not
 // <id> xosc_arch_xtalen
 #ifndef CONF_XOSC_XTALEN
-#define CONF_XOSC_XTALEN 0
+#define CONF_XOSC_XTALEN 1
 #endif
 //</h>
 //</e>
@@ -196,7 +196,7 @@
 // <i> Select the clock source.
 // <id> fdpll96m_ref_clock
 #ifndef CONF_DPLL_REFCLK_VAL
-#define CONF_DPLL_REFCLK_VAL CONF_OSCCTRL_DPLL_REFCLK_XOSC32K
+#define CONF_DPLL_REFCLK_VAL CONF_OSCCTRL_DPLL_REFCLK_XOSC
 #endif
 
 #if (CONF_DPLL_REFCLK_VAL <= CONF_OSCCTRL_DPLL_REFCLK_GCLK0)

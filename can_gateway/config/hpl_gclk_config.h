@@ -31,7 +31,7 @@
 // <i> Indicates whether Run in Standby is enabled or not
 // <id> gclk_arch_gen_0_runstdby
 #ifndef CONF_GCLK_GEN_0_RUNSTDBY
-#define CONF_GCLK_GEN_0_RUNSTDBY 0
+#define CONF_GCLK_GEN_0_RUNSTDBY 1
 #endif
 
 // <q> Divide Selection
@@ -45,7 +45,7 @@
 // <i> Indicates whether Output Enable is enabled or not
 // <id> gclk_arch_gen_0_oe
 #ifndef CONF_GCLK_GEN_0_OE
-#define CONF_GCLK_GEN_0_OE 0
+#define CONF_GCLK_GEN_0_OE 1
 #endif
 
 // <q> Output Off Value
@@ -83,7 +83,7 @@
 // <i> Indicates whether generic clock 1 configuration is enabled or not
 // <id> enable_gclk_gen_1
 #ifndef CONF_GCLK_GENERATOR_1_CONFIG
-#define CONF_GCLK_GENERATOR_1_CONFIG 0
+#define CONF_GCLK_GENERATOR_1_CONFIG 1
 #endif
 
 // <h> Generic Clock Generator Control
@@ -105,7 +105,7 @@
 // <i> Indicates whether Run in Standby is enabled or not
 // <id> gclk_arch_gen_1_runstdby
 #ifndef CONF_GCLK_GEN_1_RUNSTDBY
-#define CONF_GCLK_GEN_1_RUNSTDBY 0
+#define CONF_GCLK_GEN_1_RUNSTDBY 1
 #endif
 
 // <q> Divide Selection
@@ -119,7 +119,7 @@
 // <i> Indicates whether Output Enable is enabled or not
 // <id> gclk_arch_gen_1_oe
 #ifndef CONF_GCLK_GEN_1_OE
-#define CONF_GCLK_GEN_1_OE 0
+#define CONF_GCLK_GEN_1_OE 1
 #endif
 
 // <q> Output Off Value
@@ -140,7 +140,7 @@
 // <i> Indicates whether Generic Clock Generator Enable is enabled or not
 // <id> gclk_arch_gen_1_enable
 #ifndef CONF_GCLK_GEN_1_GENEN
-#define CONF_GCLK_GEN_1_GENEN 0
+#define CONF_GCLK_GEN_1_GENEN 1
 #endif
 // </h>
 
@@ -148,7 +148,7 @@
 //<o> Generic clock generator 1 division <0x0000-0xFFFF>
 // <id> gclk_gen_1_div
 #ifndef CONF_GCLK_GEN_1_DIV
-#define CONF_GCLK_GEN_1_DIV 16
+#define CONF_GCLK_GEN_1_DIV 1
 #endif
 // </h>
 // </e>

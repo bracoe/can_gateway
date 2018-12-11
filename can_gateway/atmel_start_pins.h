@@ -22,8 +22,13 @@
 #define GPIO_PIN_FUNCTION_H 7
 #define GPIO_PIN_FUNCTION_I 8
 
-#define Yellow_led GPIO(GPIO_PORTA, 14)
-#define Green_led GPIO(GPIO_PORTA, 15)
+#define PA04 GPIO(GPIO_PORTA, 4)
+#define PA05 GPIO(GPIO_PORTA, 5)
+#define button GPIO(GPIO_PORTA, 8)
+#define Xin GPIO(GPIO_PORTA, 14)
+#define Xout GPIO(GPIO_PORTA, 15)
+#define Yellow_led GPIO(GPIO_PORTA, 16)
+#define Green_led GPIO(GPIO_PORTA, 17)
 #define PA25 GPIO(GPIO_PORTA, 25)
 #define PB10 GPIO(GPIO_PORTB, 10)
 #define PB11 GPIO(GPIO_PORTB, 11)
