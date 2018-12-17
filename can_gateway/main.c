@@ -42,7 +42,6 @@ void CAN_0_send_message(){
 void CAN_0_send_callback(struct can_async_descriptor *const descr)
 {
 	(void)descr;
-	gpio_toggle_pin_level(Yellow_led);
 }
 void CAN_0_receive_callback(struct can_async_descriptor *const descr)
 {
@@ -52,8 +51,7 @@ void CAN_0_receive_callback(struct can_async_descriptor *const descr)
 	can_async_read(descr, &msg);
 	gpio_toggle_pin_level(Green_led);
 	
-	delay_ms(300);
-	CAN_1_send_message();
+	can_async_write(&CAN_1, &msg);
 	return;
 }
 
@@ -70,8 +68,7 @@ void CAN_1_receive_callback(struct can_async_descriptor *const descr)
 	can_async_read(descr, &msg);
 	gpio_toggle_pin_level(Green_led);
 	
-	delay_ms(300);
-	CAN_0_send_message();
+	can_async_write(&CAN_0, &msg);
 	return;
 }
 

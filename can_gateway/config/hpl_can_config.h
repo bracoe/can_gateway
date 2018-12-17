@@ -13,7 +13,7 @@
 // <i> Enable CAN FD operation
 // <id> can_cccr_fdoe
 #ifndef CONF_CAN0_CCCR_FDOE
-#define CONF_CAN0_CCCR_FDOE 1
+#define CONF_CAN0_CCCR_FDOE 0
 #endif
 
 // <q> Bit Rate Switch Enable
@@ -49,28 +49,28 @@
 // <i> Baud Rate Prescale
 // <id> can_btp_brp
 #ifndef CONF_CAN0_BTP_BRP
-#define CONF_CAN0_BTP_BRP 5
+#define CONF_CAN0_BTP_BRP 4
 #endif
 
 // <o> time segment before sample point <2-64>
 // <i> time segment before sample point
 // <id> can_btp_tseg1
 #ifndef CONF_CAN0_BTP_TSEG1
-#define CONF_CAN0_BTP_TSEG1 5
+#define CONF_CAN0_BTP_TSEG1 13
 #endif
 
 // <o> time segment after sample point <1-16>
 // <i> time segment after sample point
 // <id> can_btp_tseg2
 #ifndef CONF_CAN0_BTP_TSEG2
-#define CONF_CAN0_BTP_TSEG2 3
+#define CONF_CAN0_BTP_TSEG2 2
 #endif
 
 // <o> Data (Re)Syncronization Jump Width <1-16>
 // <i> (Re)Syncronization Jump Width
 // <id> can_btp_sjw
 #ifndef CONF_CAN0_BTP_SJW
-#define CONF_CAN0_BTP_SJW 2
+#define CONF_CAN0_BTP_SJW 1
 #endif
 
 // </h>
@@ -88,28 +88,28 @@
 // <i> Data Baud Rate Prescaler
 // <id> can_dbtp_dbrp
 #ifndef CONF_CAN0_DBTP_DBRP
-#define CONF_CAN0_DBTP_DBRP 5
+#define CONF_CAN0_DBTP_DBRP 4
 #endif
 
 // <o> Fast time segment before sample point <1-32>
 // <i> Fast time segment before sample point
 // <id> can_dbtp_dtseg1
 #ifndef CONF_CAN0_DBTP_DTSEG1
-#define CONF_CAN0_DBTP_DTSEG1 5
+#define CONF_CAN0_DBTP_DTSEG1 13
 #endif
 
 // <o> Data time segment after sample point <1-16>
 // <i> Fast time segment after sample point
 // <id> can_dbtp_dtseg2
 #ifndef CONF_CAN0_DBTP_DTSEG2
-#define CONF_CAN0_DBTP_DTSEG2 3
+#define CONF_CAN0_DBTP_DTSEG2 2
 #endif
 
 // <o> Data (Re)Syncronization Jump Width <1-16>
 // <i> Fast Syncronization Jump Width
 // <id> can_dbtp_dsjw
 #ifndef CONF_CAN0_DBTP_DSJW
-#define CONF_CAN0_DBTP_DSJW 2
+#define CONF_CAN0_DBTP_DSJW 1
 #endif
 
 // </h>
@@ -136,7 +136,7 @@
 // <i> Number of Rx FIFO 0 element
 // <id> can_rxf0c_f0s
 #ifndef CONF_CAN0_RXF0C_F0S
-#define CONF_CAN0_RXF0C_F0S 2
+#define CONF_CAN0_RXF0C_F0S 64
 #endif
 
 // <o> Data Field Size
@@ -167,7 +167,7 @@
 // <i> Number of Tx Buffers used for Tx FIFO
 // <id> can_txbc_tfqs
 #ifndef CONF_CAN0_TXBC_TFQS
-#define CONF_CAN0_TXBC_TFQS 2
+#define CONF_CAN0_TXBC_TFQS 32
 #endif
 
 // <o> Tx Buffer Data Field Size
@@ -393,7 +393,7 @@
 // <i> Enable CAN FD operation
 // <id> can_cccr_fdoe
 #ifndef CONF_CAN1_CCCR_FDOE
-#define CONF_CAN1_CCCR_FDOE 1
+#define CONF_CAN1_CCCR_FDOE 0
 #endif
 
 // <q> Bit Rate Switch Enable
@@ -429,28 +429,28 @@
 // <i> Baud Rate Prescale
 // <id> can_btp_brp
 #ifndef CONF_CAN1_BTP_BRP
-#define CONF_CAN1_BTP_BRP 5
+#define CONF_CAN1_BTP_BRP 4
 #endif
 
 // <o> time segment before sample point <2-64>
 // <i> time segment before sample point
 // <id> can_btp_tseg1
 #ifndef CONF_CAN1_BTP_TSEG1
-#define CONF_CAN1_BTP_TSEG1 5
+#define CONF_CAN1_BTP_TSEG1 13
 #endif
 
 // <o> time segment after sample point <1-16>
 // <i> time segment after sample point
 // <id> can_btp_tseg2
 #ifndef CONF_CAN1_BTP_TSEG2
-#define CONF_CAN1_BTP_TSEG2 3
+#define CONF_CAN1_BTP_TSEG2 2
 #endif
 
 // <o> Data (Re)Syncronization Jump Width <1-16>
 // <i> (Re)Syncronization Jump Width
 // <id> can_btp_sjw
 #ifndef CONF_CAN1_BTP_SJW
-#define CONF_CAN1_BTP_SJW 2
+#define CONF_CAN1_BTP_SJW 1
 #endif
 
 // </h>
@@ -468,28 +468,28 @@
 // <i> Data Baud Rate Prescaler
 // <id> can_dbtp_dbrp
 #ifndef CONF_CAN1_DBTP_DBRP
-#define CONF_CAN1_DBTP_DBRP 5
+#define CONF_CAN1_DBTP_DBRP 4
 #endif
 
 // <o> Fast time segment before sample point <1-32>
 // <i> Fast time segment before sample point
 // <id> can_dbtp_dtseg1
 #ifndef CONF_CAN1_DBTP_DTSEG1
-#define CONF_CAN1_DBTP_DTSEG1 5
+#define CONF_CAN1_DBTP_DTSEG1 13
 #endif
 
 // <o> Data time segment after sample point <1-16>
 // <i> Fast time segment after sample point
 // <id> can_dbtp_dtseg2
 #ifndef CONF_CAN1_DBTP_DTSEG2
-#define CONF_CAN1_DBTP_DTSEG2 3
+#define CONF_CAN1_DBTP_DTSEG2 2
 #endif
 
 // <o> Data (Re)Syncronization Jump Width <1-16>
 // <i> Fast Syncronization Jump Width
 // <id> can_dbtp_dsjw
 #ifndef CONF_CAN1_DBTP_DSJW
-#define CONF_CAN1_DBTP_DSJW 2
+#define CONF_CAN1_DBTP_DSJW 1
 #endif
 
 // </h>
@@ -516,7 +516,7 @@
 // <i> Number of Rx FIFO 0 element
 // <id> can_rxf0c_f0s
 #ifndef CONF_CAN1_RXF0C_F0S
-#define CONF_CAN1_RXF0C_F0S 2
+#define CONF_CAN1_RXF0C_F0S 64
 #endif
 
 // <o> Data Field Size
@@ -547,7 +547,7 @@
 // <i> Number of Tx Buffers used for Tx FIFO
 // <id> can_txbc_tfqs
 #ifndef CONF_CAN1_TXBC_TFQS
-#define CONF_CAN1_TXBC_TFQS 2
+#define CONF_CAN1_TXBC_TFQS 32
 #endif
 
 // <o> Tx Buffer Data Field Size
@@ -678,7 +678,7 @@
 // <i> Indicates whether to not disable CAN error passive interrupt
 // <id> can_ie_ep
 #ifndef CONF_CAN1_IE_EP
-#define CONF_CAN1_IE_EP 0
+#define CONF_CAN1_IE_EP 1
 #endif
 
 // <q> Bus Off

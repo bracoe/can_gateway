@@ -22,9 +22,9 @@
 #define GPIO_PIN_FUNCTION_H 7
 #define GPIO_PIN_FUNCTION_I 8
 
-#define PA04 GPIO(GPIO_PORTA, 4)
-#define PA05 GPIO(GPIO_PORTA, 5)
 #define button GPIO(GPIO_PORTA, 8)
+#define CAN_1_sleep GPIO(GPIO_PORTA, 12)
+#define CAN_0_sleep GPIO(GPIO_PORTA, 13)
 #define Xin GPIO(GPIO_PORTA, 14)
 #define Xout GPIO(GPIO_PORTA, 15)
 #define Yellow_led GPIO(GPIO_PORTA, 16)

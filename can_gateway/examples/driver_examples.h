@@ -12,8 +12,6 @@
 extern "C" {
 #endif
 
-void USART_0_example(void);
-
 void delay_example(void);
 
 void CAN_0_example(void);

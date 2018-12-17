@@ -8,14 +8,14 @@
 // <i> Indicates whether configuration for XOSC is enabled or not
 // <id> enable_xosc
 #ifndef CONF_XOSC_CONFIG
-#define CONF_XOSC_CONFIG 0
+#define CONF_XOSC_CONFIG 1
 #endif
 
 // <o> Frequency <400000-32000000>
 // <i> Oscillation frequency of the resonator connected to the External Multipurpose Crystal Oscillator.
 // <id> xosc_frequency
 #ifndef CONF_XOSC_FREQUENCY
-#define CONF_XOSC_FREQUENCY 20000000
+#define CONF_XOSC_FREQUENCY 16000000
 #endif
 
 // <h> External Multipurpose Crystal Oscillator Control
@@ -23,7 +23,7 @@
 // <i> Indicates whether External Multipurpose Crystal Oscillator is enabled or not
 // <id> xosc_arch_enable
 #ifndef CONF_XOSC_ENABLE
-#define CONF_XOSC_ENABLE 0
+#define CONF_XOSC_ENABLE 1
 #endif
 
 // <o> Start-Up Time
@@ -63,7 +63,7 @@
 // <0x4=>30MHz
 // <id> xosc_arch_gain
 #ifndef CONF_XOSC_GAIN
-#define CONF_XOSC_GAIN 0x0
+#define CONF_XOSC_GAIN 0x3
 #endif
 
 // <q> On Demand Control
@@ -114,7 +114,7 @@
 // <i> Indicates whether configuration for OSC48M is enabled or not
 // <id> enable_osc48m
 #ifndef CONF_OSC48M_CONFIG
-#define CONF_OSC48M_CONFIG 1
+#define CONF_OSC48M_CONFIG 0
 #endif
 
 // <h> 48MHz Internal Oscillator Control
@@ -122,7 +122,7 @@
 // <i> Indicates whether 48MHz Internal Oscillator is enabled or not
 // <id> osc48m_arch_enable
 #ifndef CONF_OSC48M_ENABLE
-#define CONF_OSC48M_ENABLE 1
+#define CONF_OSC48M_ENABLE 0
 #endif
 
 // <q> On Demand Control

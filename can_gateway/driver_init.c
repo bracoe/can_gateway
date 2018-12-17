@@ -14,30 +14,6 @@
 struct can_async_descriptor CAN_0;
 struct can_async_descriptor CAN_1;
 
-struct usart_sync_descriptor USART_0;
-
-void USART_0_PORT_init(void)
-{
-
-	gpio_set_pin_function(PA04, PINMUX_PA04D_SERCOM0_PAD0);
-
-	gpio_set_pin_function(PA05, PINMUX_PA05D_SERCOM0_PAD1);
-}
-
-void USART_0_CLOCK_init(void)
-{
-	hri_gclk_write_PCHCTRL_reg(GCLK, SERCOM0_GCLK_ID_CORE, CONF_GCLK_SERCOM0_CORE_SRC | (1 << GCLK_PCHCTRL_CHEN_Pos));
-	hri_gclk_write_PCHCTRL_reg(GCLK, SERCOM0_GCLK_ID_SLOW, CONF_GCLK_SERCOM0_SLOW_SRC | (1 << GCLK_PCHCTRL_CHEN_Pos));
-	hri_mclk_set_APBCMASK_SERCOM0_bit(MCLK);
-}
-
-void USART_0_init(void)
-{
-	USART_0_CLOCK_init();
-	usart_sync_init(&USART_0, SERCOM0, (void *)NULL);
-	USART_0_PORT_init();
-}
-
 void delay_driver_init(void)
 {
 	delay_init(SysTick);
@@ -101,6 +77,34 @@ void system_init(void)
 	                       GPIO_PULL_UP);
 
 	gpio_set_pin_function(button, GPIO_PIN_FUNCTION_OFF);
+
+	// GPIO on PA12
+
+	gpio_set_pin_level(CAN_1_sleep,
+	                   // <y> Initial level
+	                   // <id> pad_initial_level
+	                   // <false"> Low
+	                   // <true"> High
+	                   true);
+
+	// Set pin direction to output
+	gpio_set_pin_direction(CAN_1_sleep, GPIO_DIRECTION_OUT);
+
+	gpio_set_pin_function(CAN_1_sleep, GPIO_PIN_FUNCTION_OFF);
+
+	// GPIO on PA13
+
+	gpio_set_pin_level(CAN_0_sleep,
+	                   // <y> Initial level
+	                   // <id> pad_initial_level
+	                   // <false"> Low
+	                   // <true"> High
+	                   true);
+
+	// Set pin direction to output
+	gpio_set_pin_direction(CAN_0_sleep, GPIO_DIRECTION_OUT);
+
+	gpio_set_pin_function(CAN_0_sleep, GPIO_PIN_FUNCTION_OFF);
 
 	// GPIO on PA14
 
@@ -213,8 +217,6 @@ void system_init(void)
 	gpio_set_pin_direction(Green_led, GPIO_DIRECTION_OUT);
 
 	gpio_set_pin_function(Green_led, GPIO_PIN_FUNCTION_OFF);
-
-	USART_0_init();
 
 	delay_driver_init();
 	CAN_0_init();
