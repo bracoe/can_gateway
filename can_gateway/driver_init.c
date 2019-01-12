@@ -63,49 +63,6 @@ void system_init(void)
 {
 	init_mcu();
 
-	// GPIO on PA08
-
-	// Set pin direction to input
-	gpio_set_pin_direction(button, GPIO_DIRECTION_IN);
-
-	gpio_set_pin_pull_mode(button,
-	                       // <y> Pull configuration
-	                       // <id> pad_pull_config
-	                       // <GPIO_PULL_OFF"> Off
-	                       // <GPIO_PULL_UP"> Pull-up
-	                       // <GPIO_PULL_DOWN"> Pull-down
-	                       GPIO_PULL_UP);
-
-	gpio_set_pin_function(button, GPIO_PIN_FUNCTION_OFF);
-
-	// GPIO on PA12
-
-	gpio_set_pin_level(CAN_1_sleep,
-	                   // <y> Initial level
-	                   // <id> pad_initial_level
-	                   // <false"> Low
-	                   // <true"> High
-	                   true);
-
-	// Set pin direction to output
-	gpio_set_pin_direction(CAN_1_sleep, GPIO_DIRECTION_OUT);
-
-	gpio_set_pin_function(CAN_1_sleep, GPIO_PIN_FUNCTION_OFF);
-
-	// GPIO on PA13
-
-	gpio_set_pin_level(CAN_0_sleep,
-	                   // <y> Initial level
-	                   // <id> pad_initial_level
-	                   // <false"> Low
-	                   // <true"> High
-	                   true);
-
-	// Set pin direction to output
-	gpio_set_pin_direction(CAN_0_sleep, GPIO_DIRECTION_OUT);
-
-	gpio_set_pin_function(CAN_0_sleep, GPIO_PIN_FUNCTION_OFF);
-
 	// GPIO on PA14
 
 	gpio_set_pin_direction(Xin,
@@ -192,31 +149,31 @@ void system_init(void)
 
 	// GPIO on PA16
 
-	gpio_set_pin_level(Yellow_led,
+	gpio_set_pin_level(standby_1,
 	                   // <y> Initial level
 	                   // <id> pad_initial_level
 	                   // <false"> Low
 	                   // <true"> High
-	                   false);
+	                   true);
 
 	// Set pin direction to output
-	gpio_set_pin_direction(Yellow_led, GPIO_DIRECTION_OUT);
+	gpio_set_pin_direction(standby_1, GPIO_DIRECTION_OUT);
 
-	gpio_set_pin_function(Yellow_led, GPIO_PIN_FUNCTION_OFF);
+	gpio_set_pin_function(standby_1, GPIO_PIN_FUNCTION_OFF);
 
 	// GPIO on PA17
 
-	gpio_set_pin_level(Green_led,
+	gpio_set_pin_level(stanby_0,
 	                   // <y> Initial level
 	                   // <id> pad_initial_level
 	                   // <false"> Low
 	                   // <true"> High
-	                   false);
+	                   true);
 
 	// Set pin direction to output
-	gpio_set_pin_direction(Green_led, GPIO_DIRECTION_OUT);
+	gpio_set_pin_direction(stanby_0, GPIO_DIRECTION_OUT);
 
-	gpio_set_pin_function(Green_led, GPIO_PIN_FUNCTION_OFF);
+	gpio_set_pin_function(stanby_0, GPIO_PIN_FUNCTION_OFF);
 
 	delay_driver_init();
 	CAN_0_init();

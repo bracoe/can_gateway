@@ -4,10 +4,10 @@ versions:
   api: '1.0'
   backend: 1.4.93
   commit: 9c29f8365cf76e9937d19b1e765a83bc7a80e4e9
-  content: 1.0.1271
+  content: 1.0.1303
   content_pack_name: acme-packs-all
   format: '2'
-  frontend: 1.4.1787
+  frontend: 1.4.1810
 board:
   identifier: CustomBoard
   device: SAMC21G18A-AN
@@ -666,13 +666,6 @@ drivers:
         configuration:
           can_gclk_selection: Generic clock generator 1
 pads:
-  button:
-    name: PA08
-    definition: Atmel:SAMC21_Drivers:0.0.1::SAMC21G18A-AN::pad::PA08
-    mode: Digital input
-    user_label: button
-    configuration:
-      pad_pull_config: Pull-up
   PB10:
     name: PB10
     definition: Atmel:SAMC21_Drivers:0.0.1::SAMC21G18A-AN::pad::PB10
@@ -685,20 +678,6 @@ pads:
     mode: Peripheral IO
     user_label: PB11
     configuration: null
-  CAN_1_sleep:
-    name: PA12
-    definition: Atmel:SAMC21_Drivers:0.0.1::SAMC21G18A-AN::pad::PA12
-    mode: Digital output
-    user_label: CAN_1_sleep
-    configuration:
-      pad_initial_level: High
-  CAN_0_sleep:
-    name: PA13
-    definition: Atmel:SAMC21_Drivers:0.0.1::SAMC21G18A-AN::pad::PA13
-    mode: Digital output
-    user_label: CAN_0_sleep
-    configuration:
-      pad_initial_level: High
   Xin:
     name: PA14
     definition: Atmel:SAMC21_Drivers:0.0.1::SAMC21G18A-AN::pad::PA14
@@ -719,18 +698,20 @@ pads:
       pad_function: H
       pad_initial_level: Low
       pad_pull_config: 'Off'
-  Yellow_led:
+  standby_1:
     name: PA16
     definition: Atmel:SAMC21_Drivers:0.0.1::SAMC21G18A-AN::pad::PA16
     mode: Digital output
-    user_label: Yellow_led
-    configuration: null
-  Green_led:
+    user_label: standby_1
+    configuration:
+      pad_initial_level: High
+  stanby_0:
     name: PA17
     definition: Atmel:SAMC21_Drivers:0.0.1::SAMC21G18A-AN::pad::PA17
     mode: Digital output
-    user_label: Green_led
-    configuration: null
+    user_label: stanby_0
+    configuration:
+      pad_initial_level: High
   PA25:
     name: PA25
     definition: Atmel:SAMC21_Drivers:0.0.1::SAMC21G18A-AN::pad::PA25
